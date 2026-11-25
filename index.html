@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flashcard Quiz App</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app-container">
+    <header class="app-header">
+      <h1>Flashcard Quiz</h1>
+      <span id="card-counter" class="counter-badge">1 / 2</span>
+    </header>
+
+    <div id="flashcard" class="flashcard" role="button" tabindex="0">
+      <span id="card-label" class="card-label">QUESTION</span>
+      <p id="card-content" class="card-content"></p>
+      <span class="flip-hint">Click card to flip</span>
+    </div>
+
+    <div class="controls-row">
+      <button type="button" id="prev-btn" class="btn btn-secondary">Previous</button>
+      <button type="button" id="delete-btn" class="btn btn-danger">Delete Card</button>
+      <button type="button" id="next-btn" class="btn btn-secondary">Next</button>
+    </div>
+
+    <section class="form-section">
+      <h2>Add New Flashcard</h2>
+      <form id="entry-form">
+        <div class="form-group">
+          <label for="front-text">Question (Front)</label>
+          <textarea id="front-text" rows="2" placeholder="Enter question text..."></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="back-text">Answer (Back)</label>
+          <textarea id="back-text" rows="2" placeholder="Enter answer text..."></textarea>
+        </div>
+
+        <p id="error-msg" class="error-msg"></p>
+        <button type="submit" class="btn btn-primary">Add Flashcard</button>
+      </form>
+    </section>
+  </main>
+
+  <script src="index.ts"></script>
+</body>
+</html>
